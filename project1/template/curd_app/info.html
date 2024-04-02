@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>Information </title>
+{% endblock %}
+
+{% block content %}
+        <h1 class=" text-center m-auto mt-2 w-50 "> Patient Info Form </h1>
+        <div class="border border-4 m-auto mt-3 p-2 w-50">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit"> Submit </button>
+                <button type="reset" class="float-end"> Cancel </button>
+            </form>
+        </div>
+{% endblock %}
